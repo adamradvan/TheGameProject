@@ -1,2 +1,2 @@
 # TheGameProject
-Collab on browser game
+### Co-creator @MiriamCabadajova
