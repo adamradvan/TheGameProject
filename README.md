@@ -1,2 +1,2 @@
 # TheGameProject
-### Co-creator @MiriamCabadajova
+### Co-creator [@MiriamCabadajova](https://github.com/MiriamCabadajova)
