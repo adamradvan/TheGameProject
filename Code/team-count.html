@@ -6,21 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="styles/style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"
+        integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP"
+        crossorigin="anonymous"></script>
     <title>Team Count</title>
 </head>
 
 <body>
-    <div id="team-count">
-        <h1>NUMBER OF TEAMS</h1>
+    <div class="main-container" id="top-container">
+        <div class="section-info">
+            <h1>NUMBER OF TEAMS</h1>
+        </div>
     </div>
 
-    <div id="team-counter-block">
-        <button class="inc-dec-btn left" type="button">-</button>
-        <input type="number" name="team-count" id="team-count-input" value="2" min="2" max="8" required>
-        <button class="inc-dec-btn right" type="button">+</button>
+    <div class="main-container" id="bot-container">
+        <div id="team-counter-block">
+            <button class="inc-dec-btn left" type="button">
+                <i class="fas fa-minus"></i>
+            </button>
+            <input type="number" name="team-count" id="team-count-input" value="2" min="2" max="8" required>
+            <button class="inc-dec-btn right" type="button">
+                <i class="fas fa-plus"></i>
+            </button>
+        </div>
+        <div class="submit-btn-container">
+            <button class="submit-btn" type="button">SUBMIT</button>
+        </div>
     </div>
-
-    <button class="submit-btn" type="button">SUBMIT</button>
+    <script src="scripts/team-count.js"></script>
 </body>
 
 </html>

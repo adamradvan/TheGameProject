@@ -1,0 +1,101 @@
+:root {
+    --main-white: #F6FEFF;
+    --main-black: #3F3F3F;
+    --text-white: #FFFFFF;
+    --container-blue: #048A99;
+    --background: #BBBBBB;
+    --shadow: 1px 3px 6px rgba(63,63,63,0.4);
+}
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+
+* {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    box-sizing: border-box;
+    /* border: 1px solid grey; */
+    overflow: hidden;
+    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+}
+
+body {
+    background-color: var(--background);
+    display: flex;
+    flex-direction: column;
+}
+
+.main-container {
+    height: 50vh;
+}
+
+.section-info {
+    width: 80%;
+    height: 70%;
+    margin: 20% 10% 0% 10%;
+    padding: 0em 0.25em;
+    border-radius: 10%;
+    font-size: 1.5em;
+    color: var(--text-white);
+    border: 3px solid var(--main-white);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--container-blue);
+    box-shadow: var(--shadow);
+}
+
+
+#team-counter-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 50%;
+}
+
+
+.inc-dec-btn {
+    text-decoration: none;
+    text-align: center;
+    font-size: 2em;
+    padding: 0.6em 0.7em;
+    border-radius: 50%;
+    background-color: var(--main-white);
+    box-shadow: var(--shadow);
+}
+
+#team-count-input {
+    text-align: center;
+    padding: 0.2em;
+    font-size: 3em;
+    width: 2em;
+    border-radius: 0.5em;
+    border: 2px solid var(--main-black);
+    background-color: var(--main-white);
+    box-shadow: var(--shadow);
+}
+
+#bot-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.submit-btn-container {
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.submit-btn {
+    text-decoration: none;
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: bold;
+    padding: 0.25em 1.8em;
+    background-color: var(--main-white);
+    border-radius: 1em;
+    box-shadow: var(--shadow);
+}
