@@ -30,19 +30,23 @@ body {
     height: 50vh;
 }
 
+#top-container {
+    display: flex;
+    justify-content: center;
+}
+
 .section-info {
     width: 80%;
     height: 70%;
-    margin: 20% 10% 0% 10%;
-    padding: 0em 0.25em;
-    border-radius: 10%;
+    align-self: center;
+    padding: 0em 1em;
+    border-radius: 1em;
     font-size: 1.5em;
     color: var(--text-white);
     border: 3px solid var(--main-white);
     text-align: center;
     display: flex;
     align-items: center;
-    justify-content: center;
     background-color: var(--container-blue);
     box-shadow: var(--shadow);
 }
@@ -52,7 +56,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    height: 50%;
+    height: 25vh;
 }
 
 
@@ -83,7 +87,7 @@ body {
 }
 
 .submit-btn-container {
-    height: 50%;
+    height: 25vh;
     display: flex;
     align-items: center;
     justify-content: center;
