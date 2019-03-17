@@ -1,0 +1,75 @@
+:root {
+    --main-white: #F6FEFF;
+    --main-black: #3F3F3F;
+    --text-white: #FFFFFF;
+    --container-blue: #048A99;
+    --background: #BBBBBB;
+    --shadow: 1px 3px 6px rgba(63,63,63,0.4);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    border: 1px solid grey;
+    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+}
+
+body {
+    /* background-color: var(--background); */
+    display: flex;
+    flex-direction: column;
+}
+
+/* ---------------------------- TOP SECTION - PAGE INFO ---------------------------- */
+
+.info-section-container {
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+}
+
+.page-info-container {
+    width: 80%;
+    height: 70%;
+    align-self: center;
+    padding: 0em 1em;
+    border-radius: 1em;
+    font-size: 1.5em;
+    color: var(--text-white);
+    border: 3px solid var(--main-white);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    background-color: var(--container-blue);
+    box-shadow: var(--shadow);
+}
+
+/* ---------------------------- MID SECTION - TEAMS INFO ---------------------------- */
+
+.teams-section-container {
+    min-height: 50vh;
+}
+
+
+/* ---------------------------- BOTTOM SECTION - SUBMIT  ---------------------------- */
+
+
+.submit-section-container {
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+}
+
+.submit-btn {
+    text-decoration: none;
+    text-align: center;
+    align-self: center;
+    font-size: 2.5em;
+    font-weight: bold;
+    padding: 0.25em 1.8em;
+    background-color: var(--main-white);
+    border-radius: 1em;
+    box-shadow: var(--shadow);
+}
+
