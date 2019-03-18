@@ -11,7 +11,8 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    border: 1px solid grey;
+    /* border: none; */
+    /* border: 1px solid grey; */
     font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
 }
 
@@ -19,6 +20,7 @@ body {
     /* background-color: var(--background); */
     display: flex;
     flex-direction: column;
+    width: 100vw;
 }
 
 /* ---------------------------- TOP SECTION - PAGE INFO ---------------------------- */
@@ -35,22 +37,62 @@ body {
     align-self: center;
     padding: 0em 1em;
     border-radius: 1em;
-    font-size: 1.5em;
-    color: var(--text-white);
+    
     border: 3px solid var(--main-white);
     text-align: center;
     display: flex;
     align-items: center;
+    justify-content: center;
     background-color: var(--container-blue);
     box-shadow: var(--shadow);
+}
+
+.page-info-header {
+    color: var(--text-white);
+    font-size: 3em;
 }
 
 /* ---------------------------- MID SECTION - TEAMS INFO ---------------------------- */
 
 .teams-section-container {
     min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+.team-container {
+    margin: 0.5em 0em;
+    width: 75%;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.5em;
+    background-color: var(--main-black);
+    border: 3px solid var(--main-white);
+    box-shadow: var(--shadow);
+}
+
+.team-number-header {
+    font-size: 1.8em;
+    color: var(--text-white);
+    text-align: center;
+}
+
+.player-name-container {
+    font-family: inherit;
+    font-size: 100%;
+    border-radius: 1em;
+    padding: 0.5em 0em;
+    margin: 0.2em 0em;
+    width: 85%;
+    text-align: center;
+    border: none;
+    box-shadow: var(--shadow);
+}
 
 /* ---------------------------- BOTTOM SECTION - SUBMIT  ---------------------------- */
 
