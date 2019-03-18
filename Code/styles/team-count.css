@@ -24,6 +24,7 @@ body {
     background-color: var(--background);
     display: flex;
     flex-direction: column;
+    width: 100vw;
 }
 
 .main-container {
@@ -47,6 +48,7 @@ body {
     text-align: center;
     display: flex;
     align-items: center;
+    justify-content: center;
     background-color: var(--container-blue);
     box-shadow: var(--shadow);
 }
