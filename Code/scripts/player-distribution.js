@@ -34,3 +34,6 @@ for (i = 1; i < teamCount + 1; i++) {
     teamSectionContainer.appendChild(teamContainerDiv);
 
 }
+
+// TODO: Make a function for loading teams, add onload to HTML body
+//       Check for valid input upon submit, add warnign that all names have to added
