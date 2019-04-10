@@ -36,5 +36,6 @@ function createTeamContainers() {
 
     }
 }
-// TODO: Make a function for loading teams, add onload to HTML body
-//       Check for valid input upon submit, add warnign that all names have to added
+
+
+//  TODO:       Check for valid input upon submit, add warnign that all names have to added
