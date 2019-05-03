@@ -6,9 +6,10 @@
     --background: #BBBBBB;
     --shadow: 1px 3px 6px rgba(63,63,63,0.4);
 }
+
 input[type=number]::-webkit-inner-spin-button {
     -webkit-appearance: none;
-  }
+}
 
 * {
     margin: 0px;

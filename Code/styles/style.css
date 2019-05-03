@@ -11,8 +11,6 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    /* border: none; */
-    /* border: 1px solid grey; */
     font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
 }
 
@@ -21,8 +19,11 @@ body{
     flex-direction: column;
     justify-content: center;
     background-color: var(--background);
-    overflow: hidden;
+}
 
+html,body {
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .top-container {
@@ -67,6 +68,7 @@ body{
     border: none;
     background-color: var(--main-white);  
     color: var(--main-black); 
+    cursor: pointer;
 }
 
 .bottom-container {
