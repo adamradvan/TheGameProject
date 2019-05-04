@@ -1,0 +1,25 @@
+[
+    {
+        "teamNumber": 1,
+        "players": [
+            {
+                "name": "Adam",
+                "personalities": [
+                    "Jon Snow",
+                    "LeBron James",
+                    "Kobe Bryant"
+                ]
+            },
+            {
+                "name": "Miriam",
+                "personalities": [
+                    "The Hound",
+                    "Arya Stark",
+                    "The Night King"
+                ]
+            }
+        ],
+        "points": 0,
+        "lead": "Adam"
+    }
+]
