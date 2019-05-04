@@ -1,0 +1,125 @@
+:root {
+    --main-white: #F6FEFF;
+    --main-black: #3F3F3F;
+    --text-white: #FFFFFF;
+    --container-blue: #048A99;
+    --background: #BBBBBB;
+    --shadow: 1px 3px 6px rgba(63,63,63,0.4);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /* border: none; */
+    /* border: 1px solid grey; */
+    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+}
+
+body {
+    /* background-color: var(--background); */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+html,body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* ---------------------------- TOP SECTION - PAGE INFO ---------------------------- */
+
+.info-section-container {
+    
+    height: 18em;
+    display: flex;
+    justify-content: center;
+}
+
+.page-info-container {
+    width: 80%;
+    height: 70%;
+    align-self: center;
+    padding: 0em 1em;
+    border-radius: 1em;
+    
+    border: 3px solid var(--main-white);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--container-blue);
+    box-shadow: var(--shadow);
+}
+
+.player-name-header {
+    color: var(--text-white);
+    font-size: 3em;
+}
+
+.page-info-header {
+    color: var(--text-white);
+    font-size: 1em;
+}
+
+/* ---------------------------- MID SECTION - TEAMS INFO ---------------------------- */
+
+.perosnalities-section-container {
+    min-height: 25em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.personalities-container {
+    margin: 0.5em 0em;
+    width: 75%;
+    min-height: 22em;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 1.5em;
+    background-color: var(--main-black);
+    border: 3px solid var(--main-white);
+    box-shadow: var(--shadow);
+}
+
+
+.personality-name-container {
+    font-family: inherit;
+    font-size: 100%;
+    border-radius: 1em;
+    padding: 0.5em 0em;
+    margin: 0.2em 0em;
+    width: 85%;
+    text-align: center;
+    border: none;
+    box-shadow: var(--shadow);
+}
+
+/* ---------------------------- BOTTOM SECTION - SUBMIT  ---------------------------- */
+
+
+.submit-section-container {
+    height: 7.5em;
+    display: flex;
+    justify-content: center;
+}
+
+.submit-btn {
+    text-decoration: none;
+    text-align: center;
+    align-self: center;
+    font-size: 2.5em;
+    font-weight: bold;
+    padding: 0.25em 1.8em;
+    background-color: var(--main-white);
+    border-radius: 1em;
+    border: none;
+    box-shadow: var(--shadow);
+}
+
