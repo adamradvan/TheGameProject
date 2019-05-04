@@ -79,7 +79,9 @@ function saveDataToSessionStorage() {
         }
         teamArray.push(teamObject);
     }
-    sessionStorage.setItem('teamsJSON', JSON.stringify(teamArray))
+    sessionStorage.setItem('teamsJSON', JSON.stringify(teamArray));
+    sessionStorage.setItem('currentTeam', '0');
+    sessionStorage.setItem('currentPlayer', '0');
 }
 
 const submitBtn = document.getElementsByClassName('submit-btn')[0];
