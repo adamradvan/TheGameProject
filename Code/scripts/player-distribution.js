@@ -41,12 +41,19 @@ function getTeamCount() {
 
 function checkValidNameInputs() {
     const playerNameInputs = [...document.getElementsByClassName('player-name-container')];
+
+    let missingInputValue = false;
     playerNameInputs.forEach(input => {
         if (!input.value) {
-            alert('All names must be filled!');
-            return;
+            missingInputValue = true;
         }
     })
+
+    if (missingInputValue) {
+        alert('All names must be filled!');
+        return false;
+    }
+    return true;
 }
 
 function saveDataToSessionStorage() {
@@ -72,11 +79,15 @@ function saveDataToSessionStorage() {
         }
         teamArray.push(teamObject);
     }
-    sessionStorage.setItem('teamsJSON', JSON.stringify(teamArray))
+    sessionStorage.setItem('teamsJSON', JSON.stringify(teamArray));
+    sessionStorage.setItem('currentTeam', '0');
+    sessionStorage.setItem('currentPlayer', '0');
 }
 
 const submitBtn = document.getElementsByClassName('submit-btn')[0];
 submitBtn.addEventListener('click', () => {
-    checkValidNameInputs();
-    saveDataToSessionStorage();
+    if (checkValidNameInputs()) {
+        saveDataToSessionStorage();
+        window.location.href = "personalities.html";
+    }
 })

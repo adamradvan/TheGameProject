@@ -5,11 +5,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles/personalities.css">
     <title>Personalities</title>
 </head>
 
-<body>
-    <h1>This is Personalities page</h1>
+
+<body onload="initialiseCurrentPlayer()">
+    <div class="info-section-container">
+        <div class="page-info-container">
+            <h1 class="player-name-header">
+                <!-- JS will insert name -->
+            </h1>
+            <h2 class="page-info-header">ENTER PERSONALITIES</h2>
+        </div>
+    </div>
+
+    <div class="perosnalities-section-container">
+        <div class="personalities-container">
+            <input type="text" class="personality-name-container" name="personality-1" id="personality-1"
+                placeholder="Enter name of personality" size="15" required>
+            <input type="text" class="personality-name-container" name="personality-2" id="personality-2"
+                placeholder="Enter name of personality" size="15" required>
+            <input type="text" class="personality-name-container" name="personality-3" id="personality-3"
+                placeholder="Enter name of personality" size="15" required>
+            <input type="text" class="personality-name-container" name="personality-4" id="personality-4"
+                placeholder="Enter name of personality" size="15" required>
+            <input type="text" class="personality-name-container" name="personality-5" id="personality-5"
+                placeholder="Enter name of personality" size="15" required>
+        </div>
+    </div>
+
+    <div class="submit-section-container">
+        <button class="submit-btn" type="button">SUBMIT</button>
+    </div>
     <script src="scripts/personalities.js"></script>
 </body>
 
