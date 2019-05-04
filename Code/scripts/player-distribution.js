@@ -1,20 +1,10 @@
-
-
 // Function that is called from HTML body onload
 // Dynamically creates divs depending on data from sessionStorage, which is used on page before: 'team-count'
 function createTeamContainers() {
-    let teamCount = 2;
-
-    if (sessionStorage.getItem('teamCount') !== null) {
-        teamCount = parseInt(sessionStorage.getItem('teamCount'), 10);
-    }
-
+    const teamCount = getTeamCount();
     const teamSectionContainer = document.getElementsByClassName('teams-section-container')[0];
-    while (teamSectionContainer.firstChild) {
-        teamSectionContainer.removeChild(teamSectionContainer.firstChild);
-    }
 
-    for (i = 1; i < teamCount + 1; i++) {
+    for (let i = 1; i < teamCount + 1; i++) {
         let teamContainerDiv = document.createElement('div');
         teamContainerDiv.className = 'team-container';
 
@@ -23,7 +13,7 @@ function createTeamContainers() {
         teamHeader.innerHTML = `TEAM ${i}`;
         teamContainerDiv.appendChild(teamHeader);
 
-        for (j = 1; j < 3; j++) {
+        for (let j = 1; j <= 2; j++) {
             let playerNameInput = document.createElement('input');
             playerNameInput.className = `player-name-container player${j}`;
             playerNameInput.setAttribute('type', 'text');
@@ -39,25 +29,54 @@ function createTeamContainers() {
     }
 }
 
+function getTeamCount() {
+    if (sessionStorage.getItem('teamCount') !== null) {
+        return parseInt(sessionStorage.getItem('teamCount'), 10);
+    } else {
+        // Save default teamCount for future use in func saveDataToSessionStorage()
+        sessionStorage.setItem('teamCount', '2');
+        return 2;
+    }
+}
+
 function checkValidNameInputs() {
     const playerNameInputs = [...document.getElementsByClassName('player-name-container')];
     playerNameInputs.forEach(input => {
-        if (input.value) {
-            console.log(input.value);
-        } else {
+        if (!input.value) {
             alert('All names must be filled!');
             return;
         }
     })
-    // return true;
 }
 
-//  TODO: Check for valid input upon submit, add warning that all names have to be added
+function saveDataToSessionStorage() {
+    teamCount = parseInt(sessionStorage.getItem('teamCount'), 10);
+    teamArray = [];
+    for (let i = 1; i <= teamCount; i++) {
+        let player1Name = document.getElementById(`${i}-${1}`).value;
+        let player2Name = document.getElementById(`${i}-${2}`).value;
+        teamObject = {
+            "teamNumber": i,
+            "players": [
+                {
+                    "name": player1Name,
+                    "personalities": []
+                },
+                {
+                    "name": player2Name,
+                    "personalities": []
+                }
+            ],
+            "points": 0,
+            "lead": player1Name
+        }
+        teamArray.push(teamObject);
+    }
+    sessionStorage.setItem('teamsJSON', JSON.stringify(teamArray))
+}
+
 const submitBtn = document.getElementsByClassName('submit-btn')[0];
 submitBtn.addEventListener('click', () => {
     checkValidNameInputs();
-    console.log('All valid');
-    // sessionStorage.setItem('teamCount', String(teamCountInputNode.value));
-    // console.log('current teamcount in storage: ' + sessionStorage.getItem('teamCount'));
-
+    saveDataToSessionStorage();
 })
