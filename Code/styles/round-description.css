@@ -28,10 +28,15 @@ html,body {
     overflow-x: hidden;
 }
 
+h1 {
+    color: var(--text-white);
+    font-size: 2.5em;
+    margin: 0.5em 0em;
+}
+
 /* ---------------------------- TOP SECTION - PAGE INFO ---------------------------- */
 
 .info-section-container {
-    
     height: 18em;
     display: flex;
     justify-content: center;
@@ -54,11 +59,6 @@ html,body {
     box-shadow: var(--shadow);
 }
 
-.player-name-header {
-    color: var(--text-white);
-    font-size: 3em;
-}
-
 .page-info-header {
     color: var(--text-white);
     font-size: 1em;
@@ -66,17 +66,17 @@ html,body {
 
 /* ---------------------------- MID SECTION - TEAMS INFO ---------------------------- */
 
-.perosnalities-section-container {
+.team-score-section-container {
     min-height: 25em;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.personalities-container {
+.team-score-container {
     margin: 0.5em 0em;
     width: 75%;
-    min-height: 22em;
+    min-height: 12em;
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -88,17 +88,20 @@ html,body {
     box-shadow: var(--shadow);
 }
 
+.team-points-section {
+    width: 80%;
+    margin-bottom: 0.5em;
+    color: var(--text-white);
+    font-size: 1.5em;
+}
 
-.personality-name-container {
-    font-family: inherit;
-    font-size: 100%;
-    border-radius: 1em;
-    padding: 0.5em 0em;
-    margin: 0.2em 0em;
-    width: 85%;
-    text-align: center;
-    border: none;
-    box-shadow: var(--shadow);
+
+.team-number-points-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0.5em;
+    border-bottom: 1px dotted var(--main-white);
 }
 
 /* ---------------------------- BOTTOM SECTION - SUBMIT  ---------------------------- */

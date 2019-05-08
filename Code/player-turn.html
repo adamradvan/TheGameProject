@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,16 +9,18 @@
     <title>Player's Turn</title>
 </head>
 
-<body>
+<body onload="insertPlayerName()">
     <div class="top-container">
         <div class="name-container">
-            ADAM'S <br> TURN
+            <!-- JS will insert current player's name -->
         </div>
     </div>
 
     <div class="bottom-container">
         <button class="go-btn" type="button">GO</button>
     </div>
-    
+    <script src="scripts/player-turn.js"></script>
+
 </body>
+
 </html>

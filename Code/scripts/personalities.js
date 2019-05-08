@@ -30,18 +30,35 @@ function redirectOrStartGame() {
     else {
         // 2nd player, last team -> starting game
         // TODO: Redirect to round-description.html
-        window.location.href = "#";
-        console.log('Will redirect to RoundDescription.html, when finished');
+        // Vytvorit deck vsetkych kariet a ulozit do session storage
+        // Nastavit priznak ze sa ma resetovat deck
+
+        createDeckAllCards();
+        sessionStorage.setItem('deckAction', 'reset');
+        window.location.href = "round-description.html";
+
     }
+}
+
+
+function createDeckAllCards() {
+    let deck = [];
+
+    teamsArray.forEach(team => {
+        team.players.forEach(player =>
+            player.personalities.forEach(personality => deck.push(personality))
+        )
+    })
+
+    sessionStorage.setItem('fullDeck', JSON.stringify(deck));
 }
 
 function saveDataToSessionStorage() {
     const personalityInputs = [...document.getElementsByClassName('personality-name-container')];
     personalityInputs.forEach(personality => {
-        currPlayerPersonalities.push(personality);
+        currPlayerPersonalities.push(personality.value);
     })
 
-    console.log(teamsArray);
     sessionStorage.setItem('teamsJSON', JSON.stringify(teamsArray));
 }
 
