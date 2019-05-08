@@ -49,6 +49,8 @@ function createDeckAllCards() {
             player.personalities.forEach(personality => deck.push(personality))
         )
     })
+
+    sessionStorage.setItem('fullDeck', JSON.stringify(deck));
 }
 
 function saveDataToSessionStorage() {
