@@ -34,7 +34,7 @@ function insertRoundNumber() {
     if (!sessionStorage.getItem('roundNumber')) {
         console.log('No roundnumber in session storage, using num 1');
         sessionStorage.setItem('roundNumber', '1');
-        document.getElementsByClassName('round-number')[0].textContent = `ROUND 2`;
+        document.getElementsByClassName('round-number')[0].textContent = `ROUND 1`;
     } else {
         const number = parseInt(sessionStorage.getItem('roundNumber'), 10);
         document.getElementsByClassName('round-number')[0].textContent = `ROUND ${number}`;

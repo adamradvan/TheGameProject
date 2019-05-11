@@ -1,24 +1,12 @@
+const clock = document.getElementsByClassName('timer')[0];
+const cardDiv = document.getElementsByClassName('personality-name')[0];
+const cardsSpan = document.getElementsByClassName('cards-left-number')[0];
 let teamsArray = JSON.parse(sessionStorage.getItem('teamsJSON'));
 let cardsToPlay = JSON.parse(sessionStorage.getItem('activeDeck'));
 
 
-// REMOVE after tests and change in code to orig cardsToPlay
-let copyOfActiveCards = [...cardsToPlay];
-teamsArray[0].points = 0;
-
 let timer = 460 // 46 sec 
 let interval;
-
-
-const clock = document.getElementsByClassName('timer')[0];
-const cardDiv = document.getElementsByClassName('personality-name')[0];
-const cardsSpan = document.getElementsByClassName('cards-left-number')[0];
-
-console.log(sessionStorage);
-console.log(cardsToPlay);
-
-
-
 
 function startCountDown() {
     interval = setInterval(() => {
@@ -28,11 +16,9 @@ function startCountDown() {
             clearInterval(interval);
             // round-description page will reshuffle cards, round continues with new player, leftover cards
             sessionStorage.setItem('deckAction', 'shuffle');
+            sessionStorage.setItem('activeDeck', JSON.stringify(cardsToPlay));
             sessionStorage.setItem('teamsJSON', JSON.stringify(teamsArray));
-
-            console.log('Session after time ran out:', sessionStorage);
-            console.log('Will redirect to times-up.html');
-            // window.location.href = "times-up.html";
+            window.location.href = "times-up.html";
         }
     }, 100);
 }
@@ -41,7 +27,6 @@ function startCountDown() {
 function addPointsToTeam() {
     let teamIndex = parseInt(sessionStorage.getItem('currentTeam'), 10);
     teamsArray[teamIndex].points++;
-    console.log('Increased points!', teamsArray[teamIndex]);
 }
 
 
@@ -49,23 +34,20 @@ function addPointsToTeam() {
 const positiveBtn = document.getElementsByClassName('yes-sign')[0];
 positiveBtn.addEventListener('click', () => {
     // playSound('ok');
-    copyOfActiveCards.shift();
-    cardDiv.textContent = copyOfActiveCards[0];
-    cardsSpan.textContent = `${copyOfActiveCards.length}`;
+    cardsToPlay.shift();
+    cardDiv.textContent = cardsToPlay[0];
+    cardsSpan.textContent = `${cardsToPlay.length}`;
     addPointsToTeam();
-    console.log('OK (remaining cards)', copyOfActiveCards);
 
-    if (!copyOfActiveCards.length) {
+    if (!cardsToPlay.length) {
         clearInterval(interval);
         const roundNumber = parseInt(sessionStorage.getItem('roundNumber'), 10);
         sessionStorage.setItem('roundNumber', `${roundNumber + 1}`);
         sessionStorage.setItem('deckAction', 'reset');
         sessionStorage.setItem('teamsJSON', JSON.stringify(teamsArray));
-        console.log('Session after cards ran out:', sessionStorage);
-
-        console.log('Will redirect to round-desc.html');
-        // window.location.href = "round-description.html";
+        window.location.href = "round-description.html";
     }
+
 
 })
 
@@ -73,14 +55,14 @@ positiveBtn.addEventListener('click', () => {
 const falseBtn = document.getElementsByClassName('no-sign')[0];
 falseBtn.addEventListener('click', () => {
     // playSound('nok');
-    copyOfActiveCards.push(copyOfActiveCards.shift());
-    cardDiv.textContent = copyOfActiveCards[0];
-    console.log('NOK (remaining cards)', copyOfActiveCards);
+    cardsToPlay.push(cardsToPlay.shift());
+    cardDiv.textContent = cardsToPlay[0];
 })
 
 
+// ------------------- INITIALISATION -------------------
 function startPlayerRound() {
-    cardDiv.textContent = copyOfActiveCards[0];
-    cardsSpan.textContent = `${copyOfActiveCards.length}`;
+    cardDiv.textContent = cardsToPlay[0];
+    cardsSpan.textContent = `${cardsToPlay.length}`;
     startCountDown();
 }
