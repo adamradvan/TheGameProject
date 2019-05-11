@@ -12,13 +12,30 @@
     <title>Card</title>
 </head>
 
-<body>
+<body onload="startPlayerRound()">
     <div class="top-container-cards">
-        <div class="timer">25.2</div>
+        <div class="remaining-cards">
+            <div class="right-top-align">
+                <i class="far fa-id-card"></i>
+                <span class="cards-left-number">
+
+                    <!-- JS will insert number of cards left dynamically -->
+                </span>
+            </div>
+        </div>
+        <div class="timer">
+            <!-- JS will start countdown -->
+        </div>
     </div>
 
     <div class="mid-container-cards">
-        <div class="personality-container">HARAMBE</div>
+        <div class="personality-container">
+            <div class="personality-name">
+                <!-- JS will insert personality name -->
+            </div>
+
+
+        </div>
     </div>
 
     <div class="bottom-container-cards">
@@ -29,6 +46,8 @@
             <button class="yes-sign" type="button"><i class="fas fa-check"></i></button>
         </div>
     </div>
+
+    <script src="scripts/card.js"></script>
 
 </body>
 
