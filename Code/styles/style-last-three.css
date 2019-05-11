@@ -75,11 +75,28 @@ body{
 /*harambe*/
 
 .top-container-cards {
-    height: 27.5vh;
+    height: 30vh;
 
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.right-top-align {
+    color: var(--main-white);
+    font-size: 1.8em;
+    font-weight: bold;
+    float: right;
+    margin: 0em 1em;
+}
+
+.cards-left-number {
+    padding: 0em 0.3em;
+}
+
+.remaining-cards {
+    width: 100%;
 }
 
 .timer {
@@ -100,7 +117,7 @@ body{
 }
 
 .mid-container-cards {
-    height: 45vh;
+    height: 50vh;
 
     display: flex;
     align-items: center;
@@ -108,24 +125,25 @@ body{
 }
 
 .personality-container {
-    height: 4em;
-    width: 6.5em;
+    height: 60%;
+    width: 85%;
     background-color: var(--container-blue);
     border: 2px solid var(--main-white);
     border-radius: 0.5em;
     box-shadow: var(--shadow);
+    text-align: center;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    font-size: 3em;
+    font-size: 2.5em;
     font-weight: bold;
     color: var(--main-white);
 }
 
 .bottom-container-cards {
-    height: 27.5vh;
+    height: 20vh;
 
     display: flex;
     justify-content: center;
