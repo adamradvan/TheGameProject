@@ -2,7 +2,7 @@
  * sessionStorage
  *
  * 'deckAction' -> 'reset' / 'shuffle'
- * 'roundNumber' -> '1' / '2' / '3'
+ * 'roundNumber' -> '1' / '2' / '3' / '4'(Game over)
  * 'fullDeck' -> Array of Strings (names of all personalities)
  * 'activeDeck' -> Array of String (names of remaining personalities)
  * 'currPlayerName' -> String (name to be displayed on player-turn page)
@@ -47,8 +47,8 @@ function insertRoundExplanation() {
     switch (roundNum) {
         case 1: desc.textContent = 'EXPLAIN PERSONALITIES'; break;
         case 2: desc.textContent = '1-WORD-DESCRIPTION'; break;
-        case 3: desc.textContent = 'IT\'S PNATOMIME TIME!'; break;
-        default: desc.textContent = 'JUST DEAFAULT DESC'; break;
+        case 3: desc.textContent = 'IT\'S PANTOMIME TIME!'; break;
+        default: desc.textContent = 'GAME IS DONE'; break;
     }
 }
 
@@ -58,8 +58,6 @@ function initialiseRound() {
     createTeamPointsSection();
     handleDeckAction();
 }
-
-
 
 
 function handleDeckAction() {
@@ -132,5 +130,9 @@ function shuffleDeck(arrayJSON) {
 
 const submitBtn = document.getElementsByClassName('submit-btn')[0];
 submitBtn.addEventListener('click', () => {
-    window.location.href = "player-turn.html";
+    if (sessionStorage.getItem('roundNumber') === '4') {
+        alert('Game is over, to start again, please open the game in new webbrowser tab');
+    } else {
+        window.location.href = "player-turn.html";
+    }
 })
