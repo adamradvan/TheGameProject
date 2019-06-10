@@ -1,6 +1,9 @@
 # TheGameProject
 ### Co-creator [@MiriamCabadajova](https://github.com/MiriamCabadajova)
 
+- [x] Finish JS
 - [x] Initial demo
 - [ ] Finish up styling
-- [ ] Refactor and extract CSS duplicates
+- [ ] Refactor CSS
+- [ ] Write docs
+- [ ] Test with friends
