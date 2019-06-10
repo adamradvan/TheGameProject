@@ -1,5 +1,5 @@
 # TheGameProject
-### Co-creator [@MiriamCabadajova](https://github.com/MiriamCabadajova)
+### Wireframe by [@MiriamCabadajova](https://github.com/MiriamCabadajova)
 
 - [x] Finish JS
 - [x] Initial demo
