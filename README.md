@@ -7,3 +7,4 @@
 - [ ] Refactor CSS
 - [ ] Write docs
 - [ ] Test with friends
+- [ ] Rewrite with React.js (learning purposes)
